@@ -1,25 +1,17 @@
 import React from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
+import ValueInput from "./value_input";
 //create your first component
 const Home = () => {
+	const timeValue = ValueInput();
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<>
+		<div className="">
+			<div className="d-flex">
+				<input className="bg-dark text-white mx-auto fs-1 text-center " type="text" readOnly value={timeValue}></input>
+			</div>
 		</div>
+		</>
 	);
 };
 
